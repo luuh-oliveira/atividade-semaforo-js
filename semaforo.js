@@ -6,15 +6,16 @@ let idInterval
 const ligarVermelho = () => semaforo.src = "img/vermelho.png"
 const ligarAmarelo = () => semaforo.src = "img/amarelo.png"
 const ligarVerde = () => semaforo.src = "img/verde.png"
+const semaforoDesligado = () => semaforo.src.includes("desligado")
+
 
 function trocarCor() {
-    ligarVermelho()
 
-
-    if (ligarVermelho()) {
-        ligarAmarelo()
-    }  else {
+   
+    if (semaforoDesligado()) {
         ligarVermelho()
+    }  else {
+        
     } 
 }
 
